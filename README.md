@@ -26,6 +26,8 @@ yarn add utils-blockchain
 
 ## Multicall contract addresses
 
+> :warning: The MultiCall contract was not audited yet, so use at your OWN RISK! Syndika does not provide any guarantees or assurances!!!
+
 ### Mainnet
 
 | Name     | Address                                    |
