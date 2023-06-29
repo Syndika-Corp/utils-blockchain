@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import 'dotenv/config';
+import { getEnvVar } from "./utils/env-validation";
 
 const config: HardhatUserConfig = {
   networks: {
@@ -8,7 +9,7 @@ const config: HardhatUserConfig = {
         Local chain configuration
       */
       forking: {
-        url: `${process.env.FORK_PROVIDER}`,
+        url: getEnvVar('FORK_PROVIDER'),
         blockNumber: 17335928
       },
     },

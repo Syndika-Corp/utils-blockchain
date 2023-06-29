@@ -3,6 +3,11 @@ import { ABI } from '../test/abi';
 import { Multicall } from '../src/index';
 import 'dotenv/config';
 import { MultiCallRequest } from '@1inch/multicall';
+import { getEnvVar } from '../utils/env-validation';
+
+export function wait(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function getRandomAddress(amount: number): string[] {
   let result: string[] = [];
@@ -16,7 +21,7 @@ async function benchmark() {
   /* These constants can be configured */
   const numberOfCalls = 50;
   const usdtAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
-  const providerUrl = process.env.BENCHMARK_PROVIDER as string;
+  const providerUrl = getEnvVar('BENCHMARK_PROVIDER');
   const contract = new Contract(
     usdtAddress,
     ABI,
@@ -46,7 +51,7 @@ async function benchmark() {
     `Time spent to make ${numberOfCalls} requests using Multicall: ${multicallTimeDifference} ms`
   );
   console.log('----------------------------------------------------------');
-  
+  await wait(2000)
 
   let req: Promise<any>[] = [];
   beforeTime = Date.now();
@@ -62,7 +67,7 @@ async function benchmark() {
   const savedPromiseAllTime = promiseAllCallsTimeDifference - multicallTimeDifference;
   console.log(`Multicall saved ${savedPromiseAllTime} ms`);
   console.log('----------------------------------------------------------');
-
+  await wait(2000)
 
   beforeTime = Date.now();
   for (let index = 0; index < numberOfCalls; index++) {

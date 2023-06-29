@@ -8,9 +8,10 @@ import {
 } from '../src';
 import { Contract, JsonRpcProvider } from 'ethers';
 import { ABI } from './abi';
+import { getEnvVar } from '../utils/env-validation';
 import 'dotenv/config';
 
-const providerURI = process.env.FORK_PROVIDER as string;
+const providerURI = getEnvVar('FORK_PROVIDER');
 const contractAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
 const contract = new Contract(
   contractAddress,
