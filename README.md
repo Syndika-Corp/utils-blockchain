@@ -34,7 +34,7 @@ yarn add utils-blockchain
 | -------- | ------------------------------------------ |
 | Ethereum | 0x8d035edd8e09c3283463dade67cc0d49d6868063 |
 | BSC      | 0x804708de7af615085203fa2b18eae59c5738e2a9 |
-| Polygon  | 0x0196e8a9455a90d392b46df8560c867e7df40b34 |
+| Polygon  | 0xe38D748a07a6e3f9911Ec53ed434af2aB65716bc |
 
 ### Testnet
 
