@@ -1,3 +1,4 @@
 src/types/global.d.ts
 benchmark/
 hardhat.config.ts
+test/

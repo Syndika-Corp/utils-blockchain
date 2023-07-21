@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The TypeScript utility package designed for solving different problems in dApp development.",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -16,7 +17,7 @@
     "test:watch": "jest --watch",
     "test": "jest --coverage",
     "typecheck": "tsc --noEmit",
-    "node": "npx hardhat node",
+    "chain": "npx hardhat node",
     "docs": "npx typedoc src/index.ts",
     "benchmark": "ts-node benchmark/multicall.benchmark.ts"
   },

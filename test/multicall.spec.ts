@@ -19,7 +19,7 @@ const contract = new Contract(
   new JsonRpcProvider(providerURI)
 );
 
-describe('utils-web3', () => {
+describe('utils-blockchain', () => {
   describe('Multicall', () => {
     it('should properly initialize Multicall', async () => {
       expect(await Multicall.init(providerURI)).toBeInstanceOf(Multicall);
