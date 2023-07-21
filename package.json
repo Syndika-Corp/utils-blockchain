@@ -1,6 +1,6 @@
 {
   "name": "utils-blockchain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The TypeScript utility package designed for solving different problems in dApp development.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
